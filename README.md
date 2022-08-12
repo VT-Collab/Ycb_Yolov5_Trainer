@@ -2,17 +2,24 @@
 ## Installation
 
 ### Commands to be executed in order:
-1. ```git clone``` [Ycb_Dataset_Generator](https://github.com/VT-Collab/Ycb_Dataset_Generator.git)
-2. ```cd ./Ycb_Dataset_Generator```
-4. Setup and install ```Python 3.7.12``` or ```Python 3.8.0``` using [Pyenv](https://realpython.com/intro-to-pyenv/). **CREATE** and **ACTIVATE** a new python environment named '**YCB_generator**' running Python 3.7.12 or Python 3.8.0. (This step is required to successfully meet all the requirements)
-    * ```pyenv virtualenv 3.7.12 YCB_generator``` (Install python and create python virtual environment)
-    * ```pyenv local YCB_generator``` (Activate python virtual environment)
+1. ```git clone``` [Ycb_Yolov5_Trainer](https://github.com/VT-Collab/Ycb_Yolov5_Trainer.git) (Clone to any folder other than your [Ycb_Dataset_Generator](https://github.com/VT-Collab/Ycb_Dataset_Generator.git) folder)
+2. ```cd ./Ycb_Yolov5_Trainer```
+4. Setup and install ```Python 3.7.12``` or ```Python 3.8.0``` using [Pyenv](https://realpython.com/intro-to-pyenv/). **CREATE** and **ACTIVATE** a new python environment named '**YCB_Trainer**' running Python 3.7.12 or Python 3.8.0. (This step is required to successfully meet all the requirements)
+    * ```pyenv virtualenv 3.7.12 YCB_Trainer``` (Install python and create python virtual environment)
+    * (Only for the initial setup) ```pyenv local YCB_Trainer``` (Activate python virtual environment)
     * ```pyenv versions``` (Check if the correct virtual environment with intended python version is active) 
-3. ```pip install -r ./Requirements/requirements.txt```
-4. ```python ./ycb_generate_cropped.py``` (Generates cropped images & masks of the YCB object(s))
-5. ```mv ./models/ycb/* ./data``` (To use cropped objects from previous step in dataset generatation)
-6. Open ***generator_for_yolov5.ipynb*** -> run all the cells => generates ```100 train```, ```50 valid```, ```5 test``` 640x640 images with labels (yolo bounding box co-ordinates) by default.
-7. Follow next instructions on [Ycb_Yolov5_Trainer](https://github.com/VT-Collab/Ycb_Yolov5_Trainer.git) 
+3. ```pip install -r ./Requirements/requirements.txt``` (Installs Ycb_Yolov5_Trainer's requirements)
+4. Move/copy your custom dataset generated from following the steps on [Ycb_Dataset_Generator](https://github.com/VT-Collab/Ycb_Dataset_Generator.git) to the current directory.
+    * Example: ```mv ../Ycb_Dataset_Generator/custom_dataset .``` OR ```cp ../Ycb_Dataset_Generator/custom_dataset .```
+5. ```git clone``` [yolov5](https://github.com/ultralytics/yolov5) (Clones ultralytics's yolov5 repository)
+6. ```cd yolov5```
+7. ```pip install -r requirements.txt``` (Installs ultralytics's yolov5's requirements)
+8. Training the model:
+```python ./train.py --img 640 --batch 16 --epochs 500 --data ../custom_dataset/data.yaml  --cfg ./models/custom_yolov5s6.yaml --weights 'yolov5s6.pt' --name yolov5s6_results --cache```
+
+
+![image](https://user-images.githubusercontent.com/68425706/184452394-d01beb14-67d3-45e5-b8fd-cb5d36e6c683.png)
+![image](https://user-images.githubusercontent.com/68425706/184452400-b5e9ce22-0f4f-48c5-bbd5-b7164f6ac87c.png)
 
 ### Possible changes needed to run the notebook:
 * Packages import configuration can be different different machines:

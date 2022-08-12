@@ -15,8 +15,12 @@
 6. ```cd yolov5```
 7. ```pip install -r requirements.txt``` (Installs ultralytics's yolov5's requirements)
 8. Training the model:
-```python ./train.py --img 640 --batch 16 --epochs 500 --data ../custom_dataset/data.yaml  --cfg ./models/custom_yolov5s6.yaml --weights 'yolov5s6.pt' --name yolov5s6_results --cache```
-
+* ```python ./train.py --img 640 --batch 16 --epochs 500 --data ../custom_dataset/data.yaml  --cfg ./models/custom_yolov5s6.yaml --weights 'yolov5s6.pt' --name yolov5s6_results --cache```
+    * pretrained weights (more options available): yolov5s6
+    * epochs (more number of epochs possible): 500
+    * batch (higher number is possible with better hardware)
+9. Deploying with ultralytic's implementation (example):
+* ```python detect.py --source -1 --weights ./runs/train/yolov5s6_results/weights/best.pt```
 
 ![image](https://user-images.githubusercontent.com/68425706/184452394-d01beb14-67d3-45e5-b8fd-cb5d36e6c683.png)
 ![image](https://user-images.githubusercontent.com/68425706/184452400-b5e9ce22-0f4f-48c5-bbd5-b7164f6ac87c.png)

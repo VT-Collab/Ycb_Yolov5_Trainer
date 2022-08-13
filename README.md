@@ -10,7 +10,12 @@
     * ```pyenv versions``` (Check if the correct virtual environment with intended python version is active) 
 4. ```pip install -r ./Requirements/requirements.txt``` (Installs Ycb_Yolov5_Trainer's requirements)
 5. Move/copy your custom dataset generated from following the steps on [Ycb_Dataset_Generator](https://github.com/VT-Collab/Ycb_Dataset_Generator.git) to the current directory.
-    * Example: ```mv ../Ycb_Dataset_Generator/custom_dataset .``` OR ```cp ../Ycb_Dataset_Generator/custom_dataset .```
+   * ```bash 
+      mv ../Ycb_Dataset_Generator/custom_dataset .
+      ```
+   * ```bash 
+      cp ../Ycb_Dataset_Generator/custom_dataset .
+      ```
 6. ```git clone``` [yolov5](https://github.com/ultralytics/yolov5) (Clones ultralytics's yolov5 repository)
 7. ```cd ./yolov5```
 8. ```pip install -r requirements.txt``` (Installs ultralytics's yolov5's requirements)

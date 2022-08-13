@@ -13,6 +13,7 @@
    * ```bash 
       mv ../Ycb_Dataset_Generator/custom_dataset .
       ```
+   OR
    * ```bash 
       cp ../Ycb_Dataset_Generator/custom_dataset .
       ```

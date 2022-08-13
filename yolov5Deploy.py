@@ -79,7 +79,7 @@ def testModelLocal(model, pathToTestImages):
     for img in files_grabbed:
         results = model(f'{pathToTestImages}/{img}')
         
-        # results.show() # Yolo Way To Display Images
+        # results.show() # Ultralytic's Way To Display Images
         
         resultingImg = cv2.cvtColor(np.squeeze(results.render()), cv2.COLOR_RGB2BGR)
         
@@ -90,7 +90,7 @@ def testModelLocal(model, pathToTestImages):
         # Image resized to fit the image display window
         cv2.resizeWindow('Offline Image Detection', 640, 640) 
 
-        if cv2.waitKey(3000) & 0xFF == ord('q'): # Window stays open for 5 seconds
+        if cv2.waitKey(3000) & 0xFF == ord('q'): # Window stays open for 3 seconds
             break
     cv2.destroyAllWindows()
 

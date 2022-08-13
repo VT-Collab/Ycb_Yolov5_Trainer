@@ -29,11 +29,11 @@
     * epochs (more number of epochs possible): 500
     * batch (higher number is possible with better hardware)
 10. Deploying custom trained model (Real Time Detection):
-   * Collab's implementation:
-     ```bash
-     python ../yolov5Deploy.py live -1 ./runs/train/yolov5s6_results/weights/best.pt --mode 1
-     ```
-   * Ultralytic's implementation:
-     ```bash
-     python ./detect.py --source -1 --weights ./runs/train/yolov5s6_results/weights/best.pt
-     ```
+      * Collab's implementation:
+        ```bash
+        python ../yolov5Deploy.py live -1 ./runs/train/yolov5s6_results/weights/best.pt --mode 1
+        ```
+      * Ultralytic's implementation:
+        ```bash
+        python ./detect.py --source -1 --weights ./runs/train/yolov5s6_results/weights/best.pt
+        ```

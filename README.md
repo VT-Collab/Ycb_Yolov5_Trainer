@@ -12,7 +12,7 @@
 5. Move/copy your custom dataset generated from following the steps on [Ycb_Dataset_Generator](https://github.com/VT-Collab/Ycb_Dataset_Generator.git) to the current directory.
     * Example: ```mv ../Ycb_Dataset_Generator/custom_dataset .``` OR ```cp ../Ycb_Dataset_Generator/custom_dataset .```
 6. ```git clone``` [yolov5](https://github.com/ultralytics/yolov5) (Clones ultralytics's yolov5 repository)
-7. ```cd yolov5```
+7. ```cd ./yolov5```
 8. ```pip install -r requirements.txt``` (Installs ultralytics's yolov5's requirements)
 9. Training a model (Transfer learning with ultralytic's pretrained checkpoints - faster & accurate):
 * ```python ./train.py --img 640 --batch 16 --epochs 500 --data ../custom_dataset/data.yaml  --cfg ./models/custom_yolov5s6.yaml --weights 'yolov5s6.pt' --name yolov5s6_results --cache```

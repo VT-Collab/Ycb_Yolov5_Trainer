@@ -24,7 +24,7 @@
    * ```bash
       python ./train.py --img 640 --batch 16 --epochs 500 --data ../custom_dataset/data.yaml --cfg ./models/custom_yolov5s6.yaml --weights 'yolov5s6.pt' --name yolov5s6_results --cache
       ```
-    * pretrained weights (more checkpoints available on ultralytics/yolov5 repository): yolov5s6
+    * [pretrained weights](https://github.com/ultralytics/yolov5#pretrained-checkpoints) (more checkpoints available on ultralytics/yolov5 repository): yolov5s6
     ![image](https://user-images.githubusercontent.com/68425706/184452400-b5e9ce22-0f4f-48c5-bbd5-b7164f6ac87c.png)
     * epochs (more number of epochs possible): 500
     * batch (higher number is possible with better hardware)

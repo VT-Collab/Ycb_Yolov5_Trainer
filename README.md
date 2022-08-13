@@ -35,5 +35,5 @@
      ```
    * Ultralytic's implementation:
      ```bash
-     python detect.py --source -1 --weights ./runs/train/yolov5s6_results/weights/best.pt
+     python ./detect.py --source -1 --weights ./runs/train/yolov5s6_results/weights/best.pt
      ```
